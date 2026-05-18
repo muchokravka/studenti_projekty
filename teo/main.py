@@ -16,7 +16,7 @@ while True:
 
         print("\nPrihlasovanie...")
 
-        if meno in ucty and bcrypt.checkpw(heslo.encode(), ucty[meno]):
+        if meno in ucty and check_password(heslo, ucty[meno]):
             access = True
             logni(meno, "Successful login")
             print("\nVstup do miestnosti s reaktorom bol povoleny")
