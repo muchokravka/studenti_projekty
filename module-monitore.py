@@ -1,0 +1,8 @@
+print ("Zadajte hladinu O2")
+HladinO2 =  input(int("Hladina O2 je: "))
+print ("Zadajte hladinu CO2")
+HladinCO2 =  input(int("Hladina CO2 je: "))
+print ("Zadajte teplotu v stupnosch C: ")
+Teplota =  input(int("teplota je: "))
+print ("Zadajte tlak v kPa: ")
+Teplota =  input(int("tlak je: "))
