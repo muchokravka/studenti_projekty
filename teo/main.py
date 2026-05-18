@@ -1,8 +1,9 @@
+import bcrypt
 from users import ucty
 from log import logni
-from auth import hash_password
-import time
+from auth import check_password
 from getpass import getpass
+import time
 access = False
 pokusy = 3
 while True:
@@ -11,11 +12,11 @@ while True:
         print("\n=== PRIHLASENIE ===")
 
         meno = input("Meno: ")
-        heslo = hash_password(getpass("Heslo: "))
+        heslo = getpass("Heslo: ")
 
         print("\nPrihlasovanie...")
 
-        if meno in ucty and ucty[meno] == heslo:
+        if meno in ucty and check_password(heslo, ucty[meno]):
             access = True
             logni(meno, "Successful login")
             print("\nVstup do miestnosti s reaktorom bol povoleny")
@@ -27,7 +28,7 @@ while True:
         print("Varujem ta !@##@!#@#!#!#@!#@!#@!#@!#@@!#@")
         print("\tspravne heslo pis")
         print("\nmas 30 sekund timeout ")
-        time.sleep(30)
+        time.sleep(10)
         pokusy = 3
     
     if access:
