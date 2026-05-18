@@ -28,7 +28,7 @@ while True:
         print("Varujem ta !@##@!#@#!#!#@!#@!#@!#@!#@@!#@")
         print("\tspravne heslo pis")
         print("\nmas 30 sekund timeout ")
-        time.sleep(30)
+        time.sleep(10)
         pokusy = 3
     
     if access:
