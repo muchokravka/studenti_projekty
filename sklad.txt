@@ -1,0 +1,10 @@
+Muka:5
+Cukor:3
+Olivovy olej:2
+Ryža:4
+Cestoviny:6
+Tuniak:8
+Mlieko:10
+Paradajkovy pretlak:7
+Mleta kava:3
+Vajcia:12
