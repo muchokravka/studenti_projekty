@@ -1,10 +1,14 @@
 def diagnose(tep, tlak, teplota):
+    diagnozy = []
+ 
     if teplota > 38 and tep > 100:
-        return "Horúčka a stres"
-    elif tlak < 90:
-        return "Nízky tlak – treba infúziu"
-    else:
-        return "Vitálne funkcie v poriadku"
+        diagnozy.append("Horúčka a stres")
+    if tlak < 90:
+        diagnozy.append("Nízky tlak – treba infúziu")
+    if not diagnozy:
+        diagnozy.append("Vitálne funkcie v poriadku")
+ 
+    return " | ".join(diagnozy)
  
  
 def analyze_measurements(measurements):
@@ -31,4 +35,3 @@ for i in range(1, 6):
  
 priemerny_tep, hodnotenie = analyze_measurements(merania)
 print(f"\nPriemerný tep po 5 meraniach: {priemerny_tep:.1f} bpm — {hodnotenie}")
- 
